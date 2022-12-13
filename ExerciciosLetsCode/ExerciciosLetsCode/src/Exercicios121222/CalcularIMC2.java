@@ -30,14 +30,30 @@ public class CalcularIMC2 {
         double inputPeso = 0;
         double inputAltura = 0;
 
+
+/*        do{
+
+        } while(!continuar);
+*/
+
         do {
             continuar = false;
             try {
                 input = new Scanner(System.in);
                 System.out.println("Digite o seu Nome");
-                inputNome = input.next();
+                inputNome = input.nextLine();
                 continuar = true;
-            } catch (Exception d) {
+
+                for(int i = 0; i < inputNome.length(); i++){
+                    char letra = inputNome.charAt(i);
+                    if(letra == '0' || letra == '1'||  letra == '2'||  letra == '3'||  letra == '4'||  letra == '5'||
+                            letra == '6' ||  letra == '7'||  letra == '8'||  letra == '9'){
+                        System.out.println("Digite um Nome");
+                        continuar = false;
+                        i =  inputNome.length();
+                    }    }
+
+            } catch (Exception e) {
                 System.out.println("ERRO: Digite um nome.");
             }
         } while (!continuar);
@@ -48,7 +64,8 @@ public class CalcularIMC2 {
                 input = new Scanner(System.in);
                 System.out.println("Digite o seu Peso (Ex: 69,7)");
                 inputPeso = input.nextDouble();
-                continuar = true;
+                continuar = !(inputPeso <= 0);
+
             } catch (Exception f) {
                 System.out.println("ERRO: Digite um valor válido");
             }
@@ -61,16 +78,18 @@ public class CalcularIMC2 {
                 input = new Scanner(System.in);
                 System.out.println("Digite a sua Altura (Ex: 1,78)");
                 inputAltura = input.nextDouble();
-                continuar = true;
+
+                continuar = !(inputAltura <= 0);
             } catch (Exception e) {
                 System.out.println("ERRO: Digite um valor válido");
             }
         } while (!continuar);
 
 
-        //FAZER SWITCH
+
         //double calcularIMC = Math.pow(alturas, 2);
         double calcularIMC = inputPeso / (inputAltura * inputAltura);
+
 
         if (calcularIMC < 18.5) {
             System.out.println("O IMC do " + inputNome + " é : " + calcularIMC);
