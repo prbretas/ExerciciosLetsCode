@@ -13,7 +13,6 @@ public class Tabuada {
         int numero = 0;
         boolean continuar;
 
-
         do {
             continuar = false;
             try {
@@ -22,23 +21,20 @@ public class Tabuada {
                 System.out.println("Digite um número abaixo :");
                 numero = Input.nextInt();
                 System.out.println("Tabuada do número: " + numero);
-                continuar = true;
 
+                for (int i = 0; i < 11; i++) {
+                    System.out.print(numero + " x " + i + " = ");
+                    System.out.println(i * numero);
+
+                }
 
 
             } catch (Exception e) {
                 System.out.println("ERRO: Digite um valor válido");
-
             }
 
         } while (!continuar);
 
-
-        for (int i = 0; i < 11; i++) {
-            System.out.print(numero + " x " + i + " = ");
-            System.out.println(i * numero);
-
-        }
 
     }
 }
