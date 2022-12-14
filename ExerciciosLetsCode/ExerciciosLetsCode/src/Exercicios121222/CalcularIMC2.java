@@ -5,6 +5,7 @@ package Exercicios121222;
  * fora do peso ideal (IMC ideal é entre 18.5 e 25)*/
 /*
 Math.pow (altura, 2) // calculo
+double calcularIMC = Math.pow(alturas, 2);
 * */
 
 /* Classificação - IMC
@@ -24,105 +25,73 @@ public class CalcularIMC2 {
         System.out.println("------- Este sistema irá calcular seu IMC -------");
         System.out.println();
 
-        boolean continuar;
-        boolean continuar2;
+        boolean sair;
+        boolean sair2;
         String inputNome = "";
         double inputPeso = 0;
         double inputAltura = 0;
 
-
         do {
-            continuar2 = false;
-
+            sair2 = false;
             do {
-                continuar = false;
+                sair = false;
                 try {
                     input = new Scanner(System.in);
                     System.out.println("Digite o seu Nome:");
                     inputNome = input.nextLine();
-                    continuar = true;
+                    sair = true;
 
                     for (int i = 0; i < inputNome.length(); i++) {
                         char letra = inputNome.charAt(i);
                         if (letra == '0' || letra == '1' || letra == '2' || letra == '3' || letra == '4' || letra == '5' || letra == '6' || letra == '7' || letra == '8' || letra == '9') {
                             System.out.println("Números são inválidos!");
-                            continuar = false;
+                            sair = false;
                             i = inputNome.length();
                         }
                     }
-
                 } catch (Exception e) {
                     System.out.println("ERRO: Digite um nome.");
                 }
-            } while (!continuar);
+            } while (!sair);
 
             do {
-                continuar = false;
+                sair = false;
                 try {
                     input = new Scanner(System.in);
-                    System.out.println("Digite o seu Peso: \n" +
+                    System.out.println("Digite o seu Peso em kg: \n" +
                             "(Ex: 69,7)");
                     inputPeso = input.nextDouble();
-                    continuar = !(inputPeso <= 0);
+                    sair = !(inputPeso <= 0);
 
                 } catch (Exception f) {
                     System.out.println("ERRO: Digite um valor válido");
                 }
-            } while (!continuar);
-
+            } while (!sair);
 
             do {
-                continuar = false;
+                sair = false;
                 try {
                     input = new Scanner(System.in);
-                    System.out.println("Digite a sua Altura: \n" +
+                    System.out.println("Digite a sua Altura em metros: \n" +
                             "(Ex: 1,78)");
                     inputAltura = input.nextDouble();
-
-                    continuar = !(inputAltura <= 0);
-
-
+                    sair = !(inputAltura <= 0);
                 } catch (Exception e) {
                     System.out.println("ERRO: Digite um valor válido");
                 }
-            } while (!continuar);
-
-
-            //double calcularIMC = Math.pow(alturas, 2);
+            } while (!sair);
 
             double IMC = calcularIMC(inputPeso, inputAltura);
             TesteIMC(inputNome, IMC);
 
-            System.out.println("Deseja continuar?");
-            System.out.println("S/ N");
+        } while (!sair2);
 
-            do {
-            Scanner sair = new Scanner(System.in);
-            String inputSair = sair.next();
-            inputSair = inputSair.toUpperCase();
-                continuar2 = false;
-                if (inputSair.equals("S")) {
-                    continuar2 = false;
-
-
-                } else if (inputSair.equals("N")) {
-                    continuar2 = true;
-                }
-            } while (!continuar2);
-
-
-        } while (!continuar2);
     }
-
-
     // ---------------------------- FUNÇÕES ----------------------------
     public static double calcularIMC(double inputPeso, double inputAltura) {
         return inputPeso / (inputAltura * inputAltura);
     }
-
-
     public static void TesteIMC(String inputNome, double calcularIMC) {
-
         if (calcularIMC < 18.5) {
             System.out.println("O IMC do " + inputNome + " é : " + calcularIMC);
             System.out.println(inputNome + " está abaixo do peso.\n");
@@ -143,6 +112,5 @@ public class CalcularIMC2 {
             System.out.println(inputNome + " está em Obesidade III - Mórbida.");
         }
     }
-
+    
 }
-
