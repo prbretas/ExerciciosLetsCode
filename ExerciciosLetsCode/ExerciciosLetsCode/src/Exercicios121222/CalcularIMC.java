@@ -27,7 +27,7 @@ public class CalcularIMC {
         double[] alturas = {1.44, 1.56, 1.75, 1.82, 1.67};
 
 
-        for (int i = 0; i <= pesos.length; i++) {
+        for (int i = 0; i < 5; i++) {
 //            double calcularIMC = Math.pow(alturas, 2);
             double calcularIMC = pesos[i] / (alturas[i] * alturas[i]);
 
