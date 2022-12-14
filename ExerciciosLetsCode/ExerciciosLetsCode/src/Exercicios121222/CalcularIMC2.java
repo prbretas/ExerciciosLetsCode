@@ -8,7 +8,6 @@ Math.pow (altura, 2) // calculo
 * */
 
 /* Classificação - IMC
-
 abaixo de 18,5 - abaixo do peso
 entre 18,6 e 24,9 - Peso ideal (parabéns)
 entre 25,0 e 29,9 - Levemente acima do peso
@@ -32,7 +31,6 @@ public class CalcularIMC2 {
 
 
 /*        do{
-
         } while(!continuar);
 */
 
@@ -48,7 +46,7 @@ public class CalcularIMC2 {
                     char letra = inputNome.charAt(i);
                     if(letra == '0' || letra == '1'||  letra == '2'||  letra == '3'||  letra == '4'||  letra == '5'||
                             letra == '6' ||  letra == '7'||  letra == '8'||  letra == '9'){
-                        System.out.println("Digite um Nome");
+                        System.out.println("Números são inválidos!");
                         continuar = false;
                         i =  inputNome.length();
                     }    }
