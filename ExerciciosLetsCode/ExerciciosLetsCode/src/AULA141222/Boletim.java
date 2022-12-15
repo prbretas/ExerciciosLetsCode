@@ -35,11 +35,13 @@ public class Boletim {
                                 letra == '5' || letra == '6' || letra == '7' || letra == '8' || letra == '9'
                                 || letra == '!' || letra == '@' || letra == '#' || letra == '$' || letra == '%'
                                 || letra == '¨' || letra == '&' || letra == '*' || letra == '(' || letra == ')'
-                                || letra == '-' || letra == '_' || letra == '=' || letra == '+' || letra == ','
-                                || letra == '.' || letra == '<' || letra == '>' || letra == ';' || letra == ':'
-                                || letra == '?' || letra == '/' || letra == '|' || letra == '{' || letra == '}'
-                                || letra == '[' || letra == ']' || letra == 'º' || letra == 'ª' || letra == '"'
-                                || letra == '´'|| letra == '`'|| letra == '^'|| letra == '~') {
+                                || letra == '-' || letra == '_' || letra == '=' || letra == '§' || letra == '+'
+                                || letra == ',' || letra == '.' || letra == '<' || letra == '>' || letra == ';'
+                                || letra == ':' || letra == '?' || letra == '/' || letra == '|' || letra == '{'
+                                || letra == '}' || letra == '[' || letra == ']' || letra == 'º' || letra == 'ª'
+                                || letra == '"' || letra == '´' || letra == '`' || letra == '^' || letra == '~'
+                                || letra == '¹' || letra == '²' || letra == '³' || letra == '£' || letra == '¢'
+                                || letra == '¬') {
                             System.out.println("Números ou Simbolos são inválidos!");
                             continuar = false;
                             i = nome.length();
