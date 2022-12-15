@@ -29,8 +29,11 @@ public class Principal {
 
 
         //instanciar objeto da classe
-        Calculadora calc = new Calculadora();
-        calc.entradaDados();
+      //  Calculadora calc = new Calculadora();
+     //   calc.entradaDados();
+
+        Boletim boletim = new Boletim();
+        boletim.entradaDeDados();
 
     }
 
