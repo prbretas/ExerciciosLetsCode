@@ -32,8 +32,13 @@ public class Principal {
       //  Calculadora calc = new Calculadora();
      //   calc.entradaDados();
 
-        Boletim boletim = new Boletim();
-        boletim.entradaDeDados();
+    //    Boletim boletim = new Boletim();
+      //  boletim.entradaDeDados();
+
+        MediaIdade mediaIdade = new MediaIdade();
+        mediaIdade.entradaDados();
+
+
 
     }
 
