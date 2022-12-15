@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Boletim {
     Scanner input = new Scanner(System.in);
-
     String nome;
     double nota1 = 0;
     double nota2 = 0;
@@ -15,9 +14,7 @@ public class Boletim {
         boolean continuar2;
         System.out.println("\n-------------- SEJA BEM VINDO(A) ---------------");
         System.out.println("\n-- Este sistema irá calcular a Média do Aluno --");
-        System.out.println();
         do {
-
             continuar2 = false;
             do {
                 continuar = false;
@@ -25,10 +22,10 @@ public class Boletim {
                     input = new Scanner(System.in);
                     System.out.println();
                     System.out.println("Digite o seu Nome:");
-                    nome = input.next();
+                    nome = input.nextLine();
                     continuar = true;
 
-
+                    // CHECAR LETRAS DENTRO DO INPUT NOME. CASO TENHA NUMEROS E CHARS ESPECIAIS IRA TRAVAR.
                     for (int i = 0; i < nome.length(); i++) {
                         char letra = nome.charAt(i);
                         if (letra == '0' || letra == '1' || letra == '2' || letra == '3' || letra == '4' ||
@@ -89,12 +86,10 @@ public class Boletim {
                 }
             } while (!continuar);
             calcularMedia(nota1, nota2, nota3, nome);
-
         } while (!continuar2);
-
     }
 
-    public static double calcularMedia(double nota1, double nota2, double nota3, String nome) {
+    public static void calcularMedia(double nota1, double nota2, double nota3, String nome) {
         double resultado = (nota1 + nota2 + nota3) / 3;
         System.out.println("A sua média é: " + resultado);
 
@@ -105,8 +100,5 @@ public class Boletim {
         } else if (resultado <= 5.99) {
             System.out.printf("%s, Você está de REPROVADO", nome);
         }
-        return resultado;
     }
-
-
 }
