@@ -19,7 +19,7 @@ MÉTODOS -> Funções;
 
 public class Principal {
     public static void main(String[] args) {
-         //CRIAÇÃO DE OBJETO TAB DA CLASSE TABUADA
+        //CRIAÇÃO DE OBJETO TAB DA CLASSE TABUADA
         //  QUANDO QUISER USAR UMA CLASSE, DEVE SE CRIAR UM OBJETO DA CLASSE
         Tabuada tab = new Tabuada();
 
@@ -27,19 +27,24 @@ public class Principal {
         //tab.entradaDados();
         //tab.calcularTabuada();
 
-
+//------------------------------------------------------
         //instanciar objeto da classe
-      //  Calculadora calc = new Calculadora();
-     //   calc.entradaDados();
-
-    //    Boletim boletim = new Boletim();
-      //  boletim.entradaDeDados();
-
-        MediaIdade mediaIdade = new MediaIdade();
-        mediaIdade.entradaDados();
-
-
-
+        //  Calculadora calc = new Calculadora();
+        //   calc.entradaDados();
+//------------------------------------------------------
+        //Boletim boletim = new Boletim();
+        // boletim.entradaDeDados();
+//------------------------------------------------------
+        //  MediaIdade mediaIdade = new MediaIdade();
+        // mediaIdade.entradaDados();
+//------------------------------------------------------
+        MediaIdade3 mediaIdade3 = new MediaIdade3();
+        mediaIdade3.entradaDados();
+        mediaIdade3.resultado();
+//------------------------------------------------------
+//        IdadeNome novoApp = new IdadeNome();
+//        novoApp.entradaDado();
+//        novoApp.resultado();
     }
 
 }
