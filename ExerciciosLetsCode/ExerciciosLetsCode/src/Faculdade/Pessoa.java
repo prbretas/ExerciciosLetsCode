@@ -1,14 +1,14 @@
 package Faculdade;
 
-public class Pessoa {
+public abstract class Pessoa {
     //private String idade;
     //private String documento;
     //private Date dataNasc;
-
+    //------------------------ ATRIBUTOS ---------------------------------------
     private String _nomeAluno;
     private String _matricula;
 
-
+    // ------------------------ GET E SET --------------------------------------------
     public String get_nomeAluno() {
         return _nomeAluno;
     }
@@ -25,7 +25,17 @@ public class Pessoa {
         this._matricula = matricula;
     }
 
+    // ------------------------ CONSTRUCTOR --------------------------------------------
+    public Pessoa(String _nomeAluno, String _matricula) {
+        this._nomeAluno = _nomeAluno;
+        this._matricula = _matricula;
+    }
 
+    public Pessoa() {
+
+    }
+
+    // ------------------------ STRING --------------------------------------------
     @Override
     public String toString() {
         return "Pessoa{" +
@@ -33,8 +43,5 @@ public class Pessoa {
                 ", _matricula='" + _matricula + '\'' +
                 '}';
     }
-
-
-
 
 }

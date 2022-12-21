@@ -2,12 +2,14 @@ package Faculdade;
 
 import java.util.Scanner;
 
-public class AlunoUFSC extends Pessoa{
+public class AlunoUFSC extends Pessoa {
     Scanner input = new Scanner(System.in);
+
+    //------------------------ ATRIBUTOS --------------------------------------
     private double _prova1;
     private double _prova2;
     private double _prova3;
-
+    //------------------------ GET E SET --------------------------------------
 
     public double get_prova1() {
         return _prova1;
@@ -34,42 +36,54 @@ public class AlunoUFSC extends Pessoa{
     }
 
 
+//------------------------ CONSTRUCTOR --------------------------------------
+
+    // Construtor VAZIO -> permite a criação instanciando um objeto vazio
+
+    public AlunoUFSC() {
+
+    }
+    // Construtor CHEIO -> permite a instanciação de objeto com valores
+    //no mesmo tempo da criação
+
+    public AlunoUFSC(String nomeAluno, String matricula, double prova1, double prova2, double prova3) {
+        super(nomeAluno, matricula);
+        //super.set_nomeAluno(nome);
+        //super.set_matricula(matricula);
+        this._prova1 = prova1;
+        this._prova2 = prova2;
+        this._prova3 = prova3;
+    }
+
+// ------------------------ STRING --------------------------------------------
+
     @Override
     public String toString() {
-        return "Aluno UFSC: {" +
+        return super.toString() +
+                "Aluno UFSC: {" +
                 "\nProva 1 = " + _prova1 +
                 ",\nProva 2 = " + _prova2 +
                 ",\nProva 3 = " + _prova3 +
                 "\nMedia = " + calcMedia() + '}';
     }
 
-    public double calcMedia(){
-        double media = (_prova1 + _prova2 )/2;
-        if(media >= 7){
+
+    //------------------ METODOS -----------------------------------
+
+    public double calcMedia() {
+        double media = (_prova1 + _prova2) / 2;
+        if (media >= 7) {
             System.out.println("Aprovado");
         } else {
             System.out.println("Informe a terceira prova");
             _prova3 = input.nextDouble();
-            if(_prova3>=7){
+            if (_prova3 >= 7) {
                 System.out.println("Aprovado");
-            }else{
+            } else {
                 System.out.println("Você está Reprovado");
             }
         }
         return 0;
-    }
-// Construtor VAZIO -> permite a criação instanciando um objeto vazio
-    public AlunoUFSC(){
-
-    }
-
-    // Construtor CHEIO -> permite a instanciação de objeto com valores
-    //no mesmo tempo da criação
-        public AlunoUFSC(double prova1, double prova2, double prova3){
-        this._prova1 = prova1;
-        this._prova2 = prova2;
-        this._prova3 = prova3;
-
     }
 
 

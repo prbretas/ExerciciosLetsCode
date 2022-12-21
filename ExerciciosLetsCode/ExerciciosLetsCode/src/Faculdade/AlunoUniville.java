@@ -1,10 +1,11 @@
 package Faculdade;
 
 public class AlunoUniville extends Pessoa {
+    // ------------------------ ATRIBUTOS --------------------------------------------
     private double _prova1;
     private double _prova2;
     private double _prova3;
-
+// ------------------------ GET E SET --------------------------------------------
 
     public double get_prova1() {
         return _prova1;
@@ -31,6 +32,24 @@ public class AlunoUniville extends Pessoa {
     }
 
 
+//------------------------ CONSTRUCTOR --------------------------------------
+    public AlunoUniville() {
+
+    }
+    public AlunoUniville(String nome, String matricula, double prova1, double prova2, double prova3) {
+        super.set_nomeAluno(nome);
+        super.set_matricula(matricula);
+        this._prova1 = prova1;
+        this._prova2 = prova2;
+        this._prova3 = prova3;
+    }
+    public AlunoUniville (double prova1){
+        this._prova1 = prova1;
+    }
+
+
+// ------------------------ STRING --------------------------------------------
+
     @Override
     public String toString() {
         return "Aluno Univille: {" +
@@ -41,7 +60,7 @@ public class AlunoUniville extends Pessoa {
                 "\nMedia = " + calcMedia();
     }
 
-
+    // ------------------------ METODOS --------------------------------------------
     public double calcMedia() {
         double media = (_prova1 + (_prova2 * 2) + (_prova3) * 3) / 6;
         if (media >= 6) {
@@ -50,23 +69,6 @@ public class AlunoUniville extends Pessoa {
             System.out.println("Você está Reprovado");
         }
         return media;
-    }
-
-
-    public AlunoUniville() {
-
-    }
-
-    public AlunoUniville(String nome, String matricula, double prova1, double prova2, double prova3) {
-        super.set_nomeAluno(nome);
-        super.set_matricula(matricula);
-        this._prova1 = prova1;
-        this._prova2 = prova2;
-        this._prova3 = prova3;
-    }
-
-    public AlunoUniville (double prova1){
-        this._prova1 = prova1;
     }
 
 }
