@@ -60,7 +60,7 @@ public class AlunoUFSC extends Pessoa {
     @Override
     public String toString() {
         return super.toString() +
-                "Aluno UFSC: {" +
+                "\nAluno UFSC: {" +
                 "\nProva 1 = " + _prova1 +
                 ",\nProva 2 = " + _prova2 +
                 ",\nProva 3 = " + _prova3 +

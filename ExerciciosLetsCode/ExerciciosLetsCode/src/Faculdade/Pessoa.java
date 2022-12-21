@@ -38,10 +38,10 @@ public abstract class Pessoa {
     // ------------------------ STRING --------------------------------------------
     @Override
     public String toString() {
-        return "Pessoa{" +
-                "_nomeAluno='" + _nomeAluno + '\'' +
-                ", _matricula='" + _matricula + '\'' +
-                '}';
+        return "\nPessoa{" +
+                "\n Nome do Aluno: " + _nomeAluno +
+                "\n Nº Matricula: " + _matricula +
+                "\n}";
     }
 
 }

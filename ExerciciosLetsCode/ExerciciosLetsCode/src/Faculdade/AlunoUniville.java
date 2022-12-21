@@ -52,7 +52,7 @@ public class AlunoUniville extends Pessoa {
 
     @Override
     public String toString() {
-        return "Aluno Univille: {" +
+        return "\nAluno Univille: {" +
                 "\nProva 1 = " + _prova1 +
                 ",\nProva 2 = " + _prova2 +
                 ",\nProva 3 = " + _prova3 +

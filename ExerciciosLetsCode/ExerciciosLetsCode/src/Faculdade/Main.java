@@ -54,6 +54,11 @@ public class Main {
 
 
 
+        AlunoUFSC aluno1 = new AlunoUFSC("Joao", "2022-154987910", 6, 5,0);
+
+        System.out.println(aluno1.toString());
+        aluno1.calcMedia();
+
 
     }
 }
