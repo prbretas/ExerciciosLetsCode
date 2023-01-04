@@ -53,11 +53,26 @@ public class Main {
 
 
 
-
-        AlunoUFSC aluno1 = new AlunoUFSC("Joao", "2022-154987910", 6, 5,0);
-
+        AlunoUFSC aluno1 = new AlunoUFSC("Luis", "2022-154987910", 6.9, 7.8);
         System.out.println(aluno1.toString());
-        aluno1.calcMedia();
+
+        AlunoUFSC aluno2 = new AlunoUFSC("Jose", "2022-12541256346", 9.8, 8.8);
+        System.out.println(aluno2.toString());
+
+        AlunoUFSC aluno3 = new AlunoUFSC("Carlos", "2022-0662362342", 5.5, 5.7,6.6);
+        System.out.println(aluno3.toString());
+
+        AlunoUniville aluno4 = new AlunoUniville("Vitor", "2022#1577912597",
+                8, 6,7);
+        System.out.println(aluno4.toString());
+
+        AlunoUniville aluno5 = new AlunoUniville("Fabio", "2022#8356924577",
+                5, 4,6);
+        System.out.println(aluno5.toString());
+
+        AlunoUniville aluno6 = new AlunoUniville("Vitor", "2022#46456894597",
+                9, 7,8);
+        System.out.println(aluno6.toString());
 
 
     }

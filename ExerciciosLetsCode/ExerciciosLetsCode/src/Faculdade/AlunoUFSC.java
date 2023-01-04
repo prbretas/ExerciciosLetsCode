@@ -43,17 +43,22 @@ public class AlunoUFSC extends Pessoa {
     public AlunoUFSC() {
 
     }
-    // Construtor CHEIO -> permite a instanciação de objeto com valores
-    //no mesmo tempo da criação
+    // Construtor CHEIO -> instanciação de objeto, incluindo valores nos parametros já na criação do objeto.
 
     public AlunoUFSC(String nomeAluno, String matricula, double prova1, double prova2, double prova3) {
         super(nomeAluno, matricula);
-        //super.set_nomeAluno(nome);
-        //super.set_matricula(matricula);
         this._prova1 = prova1;
         this._prova2 = prova2;
         this._prova3 = prova3;
     }
+
+    public AlunoUFSC(String nomeAluno, String matricula, double prova1, double prova2) {
+        super(nomeAluno, matricula);
+        this._prova1 = prova1;
+        this._prova2 = prova2;
+    }
+
+
 
 // ------------------------ STRING --------------------------------------------
 
@@ -61,9 +66,9 @@ public class AlunoUFSC extends Pessoa {
     public String toString() {
         return super.toString() +
                 "\nAluno UFSC: {" +
-                "\nProva 1 = " + _prova1 +
-                ",\nProva 2 = " + _prova2 +
-                ",\nProva 3 = " + _prova3 +
+                "\nProva 1 = " + get_prova1() +
+                "\nProva 2 = " + get_prova2() +
+                "\nProva 3 = " + get_prova3() +
                 "\nMedia = " + calcMedia() + '}';
     }
 
@@ -83,7 +88,7 @@ public class AlunoUFSC extends Pessoa {
                 System.out.println("Você está Reprovado");
             }
         }
-        return 0;
+        return media;
     }
 
 

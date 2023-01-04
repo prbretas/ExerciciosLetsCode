@@ -36,16 +36,13 @@ public class AlunoUniville extends Pessoa {
     public AlunoUniville() {
 
     }
-    public AlunoUniville(String nome, String matricula, double prova1, double prova2, double prova3) {
-        super.set_nomeAluno(nome);
-        super.set_matricula(matricula);
+    public AlunoUniville(String nomeAluno, String matricula, double prova1, double prova2, double prova3) {
+        super(nomeAluno,matricula);
         this._prova1 = prova1;
         this._prova2 = prova2;
         this._prova3 = prova3;
     }
-    public AlunoUniville (double prova1){
-        this._prova1 = prova1;
-    }
+
 
 
 // ------------------------ STRING --------------------------------------------
@@ -53,11 +50,11 @@ public class AlunoUniville extends Pessoa {
     @Override
     public String toString() {
         return "\nAluno Univille: {" +
-                "\nProva 1 = " + _prova1 +
-                ",\nProva 2 = " + _prova2 +
-                ",\nProva 3 = " + _prova3 +
-                '}' +
-                "\nMedia = " + calcMedia();
+                "\nProva 1 = " + get_prova1() +
+                "\nProva 2 = " + get_prova2() +
+                "\nProva 3 = " + get_prova3() +
+                "\nMedia = " + calcMedia()+
+                '}' ;
     }
 
     // ------------------------ METODOS --------------------------------------------

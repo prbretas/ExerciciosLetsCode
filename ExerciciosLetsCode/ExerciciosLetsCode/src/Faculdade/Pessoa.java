@@ -12,7 +12,6 @@ public abstract class Pessoa {
     public String get_nomeAluno() {
         return _nomeAluno;
     }
-
     public void set_nomeAluno(String nomeAluno) {
         this._nomeAluno = nomeAluno;
     }
@@ -20,7 +19,6 @@ public abstract class Pessoa {
     public String get_matricula() {
         return _matricula;
     }
-
     public void set_matricula(String matricula) {
         this._matricula = matricula;
     }
@@ -39,8 +37,8 @@ public abstract class Pessoa {
     @Override
     public String toString() {
         return "\nPessoa{" +
-                "\n Nome do Aluno: " + _nomeAluno +
-                "\n Nº Matricula: " + _matricula +
+                "\n Nome do Aluno: " + get_nomeAluno() +
+                "\n Nº Matricula: " + get_matricula() +
                 "\n}";
     }
 
