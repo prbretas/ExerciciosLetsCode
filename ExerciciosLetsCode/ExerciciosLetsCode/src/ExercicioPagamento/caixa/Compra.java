@@ -45,7 +45,7 @@ public class Compra implements Imprimivel, Autorizacao {
     @Override
     public String getCorpoNF() {
         //mostrar o produto e po valor da compra
-        return this._nomeProduto + "=" + this._valorCompra;
+        return this._nomeProduto + " = R$" + this._valorCompra;
     }
 
 
